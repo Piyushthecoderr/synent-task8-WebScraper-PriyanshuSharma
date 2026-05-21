@@ -5,10 +5,13 @@ A Python based web scraping project that extracts book data from Books to Scrape
 - Extracts:
   - Book titles
   - Prices
-- Uses:
-  - Python
-  - Requests
-  - BeautifulSoup4
+  - Ratings
+  - Stock availability
+- Structured data extraction using dictionaries and lists
+- HTTP request handling using Requests
+- HTML parsing using BeautifulSoup4
+- Error handling using try-except blocks
+- Response status code validation
 - Beginner-friendly scraping workflow
 - Git and GitHub integrated
 
@@ -22,7 +25,9 @@ pip install -r requirements.txt
 ```
 
 ## Run Project
+```bash
 python app.py
+```
 
 ## Technologies Used
 - Python
