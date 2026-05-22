@@ -8,6 +8,9 @@ A Python based web scraping project that extracts book data from Books to Scrape
   - Ratings
   - Stock availability
 - Structured data extraction using dictionaries and lists
+- Exports scraped data to:
+  - CSV
+  - JSON
 - HTTP request handling using Requests
 - HTML parsing using BeautifulSoup4
 - Error handling using try-except blocks
@@ -33,4 +36,6 @@ python app.py
 - Python
 - BeautifulSoup4
 - Requests
+- CSV
+- JSON
 - Git/GitHub

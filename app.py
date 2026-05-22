@@ -1,3 +1,5 @@
+import csv
+import json
 import requests
 from bs4 import BeautifulSoup
 
@@ -31,14 +33,21 @@ try:
             book_Availability=item_book.find("p",class_="instock availability").text.strip()
             book_Info={
                 "Title":book_Title,
-                "Price":book_Price,
+                "Cost":book_Price,
                 "Rating":book_Rating,
                 "Availability":book_Availability }
             books_List.append(book_Info)
 
-        for item in books_List:
-            print(item)
-        
+        with open("data/books.csv","w",newline="",encoding="utf-8") as csvFile:
+            fieldnames=["Title","Cost","Rating","Availability"]
+            writer=csv.DictWriter(csvFile,fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(books_List)
+        print("Successfull creation of CSV File")
+
+        with open("data/books.json","w",encoding="utf-8") as jsonFile:
+            json.dump(books_List,jsonFile, indent=4)
+        print("Successfull creation of JSON File") 
     else:
         print("Failed to fetch webpage")
         print("Status code:",response.status_code)
