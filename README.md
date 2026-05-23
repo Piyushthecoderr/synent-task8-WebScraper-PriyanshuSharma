@@ -1,5 +1,5 @@
 # SmartScrape
-A Python based web scraping project that extracts book data from Books to Scrape using Requests and BeautifulSoup.
+A Python based web scraping project that extracts structured book data from Books to Scrape using Requests and BeautifulSoup.
 
 ## Features
 - Extracts:
@@ -7,12 +7,14 @@ A Python based web scraping project that extracts book data from Books to Scrape
   - Prices
   - Ratings
   - Stock availability
+- Scrapes data from all website pages using pagination
 - Structured data extraction using dictionaries and lists
 - Exports scraped data to:
   - CSV
   - JSON
 - HTTP request handling using Requests
 - HTML parsing using BeautifulSoup4
+- Response timeout handling
 - Error handling using try-except blocks
 - Response status code validation
 - Beginner-friendly scraping workflow
