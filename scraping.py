@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-def fetch_Page(url):
-    response=requests.get(url,timeout=10)
+def fetch_Page(url,request_Headers):
+    response=requests.get(url,headers=request_Headers,timeout=10)
     if response.status_code != 200:
         print("Failed to fetch webpage")
         print("Status code:",response.status_code)
@@ -32,6 +32,6 @@ def extract_Books(html_Content):
             "Cost":book_Price,
             "Rating":book_Rating,
             "Availability":book_Availability
-                }
+                  }
         books_List.append(book_Info)
     return books_List
